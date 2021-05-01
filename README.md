@@ -1,5 +1,5 @@
 3. 팀소개
-OSS miniproject 팀 2
+ *OSS miniproject 팀 2
 
 *이승용 
   *Repository Owner
