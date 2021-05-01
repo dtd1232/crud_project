@@ -7,7 +7,7 @@
   * 검색: 원하는 테이블을 검색해 인원 수와 가격을 확인할 수 있는 기능
 
 3. 팀 소개
- *OSS miniproject 팀 2
+* OSS miniproject 팀 2
 
 * 이승용 
   * Repository Owner
