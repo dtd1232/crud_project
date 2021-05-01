@@ -7,7 +7,7 @@ OSS miniproject 팀 2
     * 파일 저장/ 입출력 함수
     * 검색 기능 함수
 
-* 이호영
+*이호영
   *Contributer
   * 역할
     *CRUD 함수
