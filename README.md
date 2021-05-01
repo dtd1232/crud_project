@@ -1,4 +1,4 @@
-# crud_project
+# CRUD Mini project
 
 ***
 #팀소개
