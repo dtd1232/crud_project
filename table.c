@@ -10,7 +10,7 @@ int createTable(Table *p){
 }
 
 void readTable(Table p){
-	printf("%d, %d\n", p.guestNumber, p.tableSum);
+	printf("%2d, %7d\n", p.guestNumber, p.tableSum);
 }
 
 int updateTable(Table *p){
