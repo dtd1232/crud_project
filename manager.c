@@ -2,7 +2,7 @@
 
 
 void saveTable(Table p[], int count){
-    FILE *fp = fopen("Table.txt", "wt"); ///write 모드로 스트림을 생성한 파일 구조체 
+    FILE *fp = fopen("Table.txt", "wt");
 
     for (int i = 0; i < count; i++)
     {
@@ -39,7 +39,7 @@ int loadTable(Table *p){
         if (feof(fp))
             break;
 
-    fprintf(fp, "%d %d", &p[i].guestNumber, &p[i].tableSum);
+    fscanf(fp, "%d %d", &p[i].guestNumber, &p[i].tableSum);
     
    
     }
@@ -52,8 +52,8 @@ int loadTable(Table *p){
 }
 
 void searchTable(Table p[], int count){
-    int scn = 0, num = 0; //  num -> 검색할 데이터를 선택하기 위한 변수, scn -> 찾은 데이터의 개수를 저장하기위한 변수
-    char search[20];// search -> 찾기위한 데이터를 저장하기위한 문자열 변수
+    int scn = 0, num = 0;
+    int search;
     
     printf("검색할 종류를 선택하세요. \n");
     printf("1.인원수 \n");
@@ -65,16 +65,14 @@ void searchTable(Table p[], int count){
     {
     case 1:
         printf("검색할 인원수는? ");
-        scanf("%d", search);
+        scanf("%d", &search);
         break;
     case 2:
         printf("검색할 이용금액은? ");
-        scanf("%d", search);
+        scanf("%d", &search);
         break;
-  
+    }
    
-    
-
     for (int i = 0; i < count; i++)
     {
 
@@ -86,7 +84,8 @@ void searchTable(Table p[], int count){
             case 1:
                 if (p[i].guestNumber == search)
                 {
-                    printf("%d ", i + 1);
+                    printTableFormat();
+                    printf("%d 번 테이블", i + 1);
                     readTable(p[i]);
                     scn++;
                 }
@@ -94,7 +93,8 @@ void searchTable(Table p[], int count){
             case 2:
                 if (p[i].tableSum == search)
                 {
-                    printf("%d ", i + 1);
+                    printTableFormat();
+                    printf("%d 번 테이블", i + 1);
                     readTable(p[i]);
                     scn++;
                 }
