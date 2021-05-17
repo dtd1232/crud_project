@@ -12,12 +12,12 @@ void saveTable(Table p[], int count){
     }
 
     if (fp == NULL)
-        printf("ÆÄÀÏ ÀúÀå¿¡ ½ÇÆĞÇß½À´Ï´Ù! \n");
+        printf("íŒŒì¼ ì €ì¥ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤! \n");
 
     else
     {
         fclose(fp);
-        printf("=>ÀúÀåµÊ! \n");
+        printf("=>ì €ì¥ë¨! \n");
     }
 }
 
@@ -30,7 +30,7 @@ int loadTable(Table *p){
 
     if (fp == NULL)
     {
-        printf(" \n ÆÄÀÏ ¾øÀ½ \n \n");
+        printf(" \n íŒŒì¼ ì—†ìŒ \n \n");
         return 0;
     }
 
@@ -45,7 +45,7 @@ int loadTable(Table *p){
     }
     i--;
     fclose(fp);
-    printf("=> ·Îµù ¼º°ø! \n");
+    printf("=> ë¡œë”© ì„±ê³µ! \n");
 
     return i;
 
@@ -55,20 +55,20 @@ void searchTable(Table p[], int count){
     int scn = 0, num = 0;
     int search;
     
-    printf("°Ë»öÇÒ Á¾·ù¸¦ ¼±ÅÃÇÏ¼¼¿ä. \n");
-    printf("1.ÀÎ¿ø¼ö \n");
-    printf("2.ÀÌ¿ë±İ¾× \n");
+    printf("ê²€ìƒ‰í•  ì¢…ë¥˜ë¥¼ ì„ íƒí•˜ì„¸ìš”. \n");
+    printf("1.ì¸ì›ìˆ˜ \n");
+    printf("2.ì´ìš©ê¸ˆì•¡ \n");
     
     scanf("%d" , &num);
 
     switch (num)
     {
     case 1:
-        printf("°Ë»öÇÒ ÀÎ¿ø¼ö´Â? ");
+        printf("ê²€ìƒ‰í•  ì¸ì›ìˆ˜ëŠ”? ");
         scanf("%d", &search);
         break;
     case 2:
-        printf("°Ë»öÇÒ ÀÌ¿ë±İ¾×Àº? ");
+        printf("ê²€ìƒ‰í•  ì´ìš©ê¸ˆì•¡ì€? ");
         scanf("%d", &search);
         break;
     }
@@ -85,7 +85,7 @@ void searchTable(Table p[], int count){
                 if (p[i].guestNumber == search)
                 {
                     printTableFormat();
-                    printf("%d ¹ø Å×ÀÌºí", i + 1);
+                    printf("%d ë²ˆ í…Œì´ë¸”", i + 1);
                     readTable(p[i]);
                     scn++;
                 }
@@ -94,7 +94,7 @@ void searchTable(Table p[], int count){
                 if (p[i].tableSum == search)
                 {
                     printTableFormat();
-                    printf("%d ¹ø Å×ÀÌºí", i + 1);
+                    printf("%d ë²ˆ í…Œì´ë¸”", i + 1);
                     readTable(p[i]);
                     scn++;
                 }
@@ -103,7 +103,7 @@ void searchTable(Table p[], int count){
 
     }
     if (scn == 0)
-        printf(" => °Ë»öµÈ µ¥ÀÌÅÍ ¾øÀ½! \n");
+        printf(" => ê²€ìƒ‰ëœ ë°ì´í„° ì—†ìŒ! \n");
 
     printf("\n");
     getchar();

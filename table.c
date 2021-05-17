@@ -9,7 +9,7 @@ int createTable(Table *p)
         char* token;
         int i = 0; 
 
-        printf("ÃÑ ÀÌ¿ëÀÚ ¼ıÀÚ´Â? (ÃÖ´ë 10¸í±îÁö °¡´É!)");
+        printf("ì´ ì´ìš©ì ìˆ«ìëŠ”? (ìµœëŒ€ 10ëª…ê¹Œì§€ ê°€ëŠ¥!)");
         scanf("%s", token);
 
         while (getchar() != '\n');
@@ -20,13 +20,13 @@ int createTable(Table *p)
 
         if (i != strlen(token) || atoi(token) > 10 || atoi(token) <= 0)
         {  
-            printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ½Ê½Ã¿À. \n");
+            printf("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì‹­ì‹œì˜¤. \n");
             continue;
         }
 
         p->guestNumber = atoi(token);
         
-        printf("ÃÑ ÀÌ¿ë ±İ¾×Àº? ");
+        printf("ì´ ì´ìš© ê¸ˆì•¡ì€? ");
         scanf("%s", token);
 
         while (getchar() != '\n');
@@ -39,7 +39,7 @@ int createTable(Table *p)
 
         if (i != strlen(token) || atoi(token) <= 0)
         {
-            printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ½Ê½Ã¿À. \n");
+            printf("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì‹­ì‹œì˜¤. \n");
             continue;
         }
         p->tableSum = atoi(token);
@@ -52,13 +52,13 @@ int createTable(Table *p)
 
 void printTableFormat()
 {
-    printf("Å×ÀÌºí¹øÈ£    ÀÎ¿ø¼ö   ÃÑ ÀÌ¿ë ±İ¾×\n");
+    printf("í…Œì´ë¸”ë²ˆí˜¸    ì¸ì›ìˆ˜   ì´ ì´ìš© ê¸ˆì•¡\n");
     printf("========================================================\n");
 }
 
 int readTable(Table p)
 {
-    printf("%7d ¸í %8d ¿ø\n", p.guestNumber, p.tableSum);
+    printf("%7d ëª… %8d ì›\n", p.guestNumber, p.tableSum);
 }
 
 void listTable(Table p[], int count)
@@ -70,7 +70,7 @@ void listTable(Table p[], int count)
     {
         if (p[i].guestNumber == -1)
             continue;
-        printf("%d ¹ø Å×ÀÌºí", i + 1);
+        printf("%d ë²ˆ í…Œì´ë¸”", i + 1);
         readTable(p[i]);
     }
     printf("\n");
@@ -80,7 +80,7 @@ int selectTableNo(Table p[], int count)
 {
     int no;
     listTable(p, count);
-    printf("¹øÈ£´Â (Ãë¼Ò :0)? ");
+    printf("ë²ˆí˜¸ëŠ” (ì·¨ì†Œ :0)? ");
     scanf("%d", &no);
     return no;
 }
@@ -92,7 +92,7 @@ int updateTable(Table *p)
         char* token;
         int i = 0; 
 
-        printf("ÃÑ ÀÌ¿ëÀÚ ¼ıÀÚ´Â? (ÃÖ´ë 10¸í±îÁö °¡´É!)");
+        printf("ì´ ì´ìš©ì ìˆ«ìëŠ”? (ìµœëŒ€ 10ëª…ê¹Œì§€ ê°€ëŠ¥!)");
         scanf("%s", token);
 
         while (getchar() != '\n');
@@ -103,13 +103,13 @@ int updateTable(Table *p)
 
         if (i != strlen(token) || atoi(token) > 10 || atoi(token) <= 0)
         {  
-            printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ½Ê½Ã¿À. \n");
+            printf("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì‹­ì‹œì˜¤. \n");
             continue;
         }
 
         p->guestNumber = atoi(token);
         
-        printf("ÃÑ ÀÌ¿ë ±İ¾×Àº? ");
+        printf("ì´ ì´ìš© ê¸ˆì•¡ì€? ");
         scanf("%s", token);
 
         while (getchar() != '\n');
@@ -122,7 +122,7 @@ int updateTable(Table *p)
 
         if (i != strlen(token) || atoi(token) <= 0)
         {
-            printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ½Ê½Ã¿À. \n");
+            printf("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì‹­ì‹œì˜¤. \n");
             continue;
         }
         p->tableSum = atoi(token);
@@ -130,7 +130,7 @@ int updateTable(Table *p)
         break;
     }
 
-    printf("==> ¼öÁ¤¼º°ø! \n");
+    printf("==> ìˆ˜ì •ì„±ê³µ! \n");
 
     return 1;
 }
@@ -146,15 +146,15 @@ int deleteTable(Table *p)
 int selectMenu()
 {
     int menu;
-    printf("*** Å×ÀÌºí °ü¸® ½Ã½ºÅÛ ***\n");
-    printf("1. Å×ÀÌºíÁ¶È¸\n");
-    printf("2. Å×ÀÌºíÃß°¡\n");
-    printf("3. Å×ÀÌºí¼öÁ¤\n");
-    printf("4. Å×ÀÌºí»èÁ¦\n");
-    printf("5. Å×ÀÌºíÀúÀå\n");
-    printf("6. Å×ÀÌºí ÀÎ¿ø¼ö °Ë»ö\n");
-    printf("0. Á¾·á\n\n");
-    printf("=> ¿øÇÏ´Â ¸Ş´º´Â? ");
+    printf("*** í…Œì´ë¸” ê´€ë¦¬ ì‹œìŠ¤í…œ ***\n");
+    printf("1. í…Œì´ë¸”ì¡°íšŒ\n");
+    printf("2. í…Œì´ë¸”ì¶”ê°€\n");
+    printf("3. í…Œì´ë¸”ìˆ˜ì •\n");
+    printf("4. í…Œì´ë¸”ì‚­ì œ\n");
+    printf("5. í…Œì´ë¸”ì €ì¥\n");
+    printf("6. í…Œì´ë¸” ì¸ì›ìˆ˜ ê²€ìƒ‰\n");
+    printf("0. ì¢…ë£Œ\n\n");
+    printf("=> ì›í•˜ëŠ” ë©”ë‰´ëŠ”? ");
     scanf("%d", &menu);
 
     return menu;

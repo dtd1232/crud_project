@@ -18,7 +18,7 @@ int main()
             break;
         if (menu == 1 || menu == 3 || menu == 4)
             if (count == 0){
-                printf(" µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.\n");
+                printf(" ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.\n");
                 continue;
             }
 
@@ -36,14 +36,14 @@ int main()
             if (no > 0)
                 updateTable(&p[no - 1]);
             else
-                printf("Ãë¼ÒµÊ!\n");
+                printf("ì·¨ì†Œë¨!\n");
         }
         else if (menu == 4)
         {
             int no = selectTableNo(p, index);
             if (no > 0)
             {
-                printf("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?(»èÁ¦:1) ");
+                printf("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?(ì‚­ì œ:1) ");
                 int delok;
                 scanf("%d", &delok);
                 if (delok == 1)
@@ -63,6 +63,6 @@ int main()
             searchTable(p, index);
         }
     }
-        printf("Á¾·áµÊ!\n");
+        printf("ì¢…ë£Œë¨!\n");
         return 0;
 }
