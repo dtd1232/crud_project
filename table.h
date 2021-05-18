@@ -8,9 +8,17 @@ typedef struct{
 } Table;
 
 int createTable(Table *p);
-void readTable(Table p);
+
+void printTableFormat();
+
+int readTable(Table p);
+
+void listTable(Table p[], int count);
+
+int selectTableNo(Table p[], int count);
+
 int updateTable(Table *p);
+
 int deleteTable(Table *p);
+
 int selectMenu();
-void listTable(Table *p, int count);
-int selectTableNo(Table *p, int count);
